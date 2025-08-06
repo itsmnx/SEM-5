@@ -1,3 +1,4 @@
+//zombie process-exp:4(6-08)
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -11,7 +12,7 @@ int main() {
     }
     if (pid == 0) {
         printf("Child process (PID: %d) exiting.\n", getpid());
-        exit(0); 
+        exit(0); //here the child process gets exit while the parent get sleeps
     } else {
         printf("Parent process (PID: %d). Child PID: %d\n", getpid(), pid);
         printf("Sleeping for 02 seconds to keep child in zombie state.\n");
