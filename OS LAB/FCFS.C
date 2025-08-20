@@ -1,4 +1,5 @@
-//Practical-06
+//Practical-05
+
 #include <stdio.h>
 int main() {
     int n, i;
