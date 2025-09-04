@@ -1,3 +1,6 @@
+//Lab-8(4-09-25)
+//implementation of pipe system call(inter communication model)
+
 #include <stdio.h>
 #include <unistd.h>
 #include <string.h>
