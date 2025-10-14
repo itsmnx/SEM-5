@@ -54,6 +54,9 @@ printf("Parent:Reading data from shared memory..\n");
 printf("Parent: Recieved message=\"%s\"\n",share);
 printf("Parent: Number of bytes read = %lu\n", strlen(share));
 printf("Process PID: %d\n",getpid());
+printf("shmid id: %d\n",shmid);
+printf("key id: %d\n",key);
+
 shmdt(share);
 shmctl(shmid,IPC_RMID,NULL);
 }
