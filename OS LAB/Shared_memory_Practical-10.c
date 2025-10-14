@@ -1,4 +1,5 @@
-//Date-14-OCT-2025
+//14-0ct-2025
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<sys/ipc.h>//header file fot ftok
@@ -39,6 +40,7 @@ exit(1);
 printf("Child: writing data to share memory..\n");
 strcpy(share,"Implemetation of IPC throgh shared memory!!");
 printf("Child: Data written successfully-\n");
+printf("Child PID: %d, Parent PID: %d\n",getpid(),getppid());
 shmdt(share);
 }
 else{
@@ -51,6 +53,7 @@ exit(1);
 printf("Parent:Reading data from shared memory..\n");
 printf("Parent: Recieved message=\"%s\"\n",share);
 printf("Parent: Number of bytes read = %lu\n", strlen(share));
+printf("Process PID: %d\n",getpid());
 shmdt(share);
 shmctl(shmid,IPC_RMID,NULL);
 }
