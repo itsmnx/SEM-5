@@ -1,3 +1,4 @@
+//Practical-10
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
